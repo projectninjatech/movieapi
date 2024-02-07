@@ -14,13 +14,17 @@
             <a class="add-movie-button" href="/addMovieRoute">Add Movie</a>
             <a class="update-movie-button" href="/updateMovieRoute">Update Movie</a>
             <a class="delete-movie-button" href="/deleteMovieRoute">Delete Movie</a>
-            <a class="dashboard-movie-button" href="/scanAllMovies">Scan All Movies</a>
+            {{#if server_status_eq_remote}}
+                <a class="dashboard-movie-button" href="/scanAllMovies">Scan All Movies</a>
+            {{/if}}
 
 
-            <a class="add-shows-button" href="/addShowsRoute">Add TV Shows</a>
-            <a class="add-shows-button" href="/updateShowsRoute">Update TV Shows</a>
-            <a class="add-shows-button" href="/deleteShowsRoute">Delete TV Shows</a>
-            <a class="add-shows-button" href="/scanAllShows">Scan All TV Shows</a>
+            <a class="add-movie-button" href="/addShowsRoute">Add TV Shows</a>
+            <a class="update-movie-button" href="/updateShowsRoute">Update TV Shows</a>
+            <a class="delete-movie-button" href="/deleteShowsRoute">Delete TV Shows</a>
+            {{#if server_status_eq_remote}}
+                <a class="dashboard-movie-button" href="/scanAllShows">Scan All TV Shows</a>
+            {{/if}}
 
             <a class="logout-button" href="/admin/logout">Logout</a>
         </div>
@@ -114,18 +118,6 @@
             transition: background-color 0.3s ease;
         }
 
-        .add-shows-button {
-            flex: 1;
-            margin: 0 10px;
-            padding: 15px;
-            background-color: #196de2;
-            color: #fff;
-            text-decoration: none;
-            text-align: center;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
 
         .logout-button {
             flex: 1;

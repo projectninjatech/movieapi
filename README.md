@@ -23,9 +23,11 @@ Follow these steps to set up and run the app on your local machine:
    HTTP_SERVER_ADDR = "YOUR HTTP SERVER ADDRESS e.g. http://192.168.0.148:8080"
    MOVIE_DIR = "YOUR MOVIE DIRECTORY e.g. C:/Users/imran/Downloads/Video/movies (dir name should be movies)"
    SHOWS_DIR = "YOUR SHOWS DIRECTORY e.g. C:/Users/imran/Downloads/Video/shows (dir name should be shows)"
+   PORT = 5000
+   SERVER_STATUS = "remote (if local then scanAllMovies and scanAllShows button will be shown on dashboard)"
 
 ### Start the App
 1. Install dependencies by running:
 npm install
 2. Start the Node.js server by running:
-node app.js and npm run dev (if running locally which will create http-server)
+node app.js or npm run dev (if running locally which will create http-server)

@@ -1,4 +1,5 @@
 // dashboard.js
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 
@@ -12,7 +13,9 @@ function isAdminAuthenticated(req, res, next) {
   router.get('/', isAdminAuthenticated, (req, res) => {
     const user = req.user;
     console.log("Dashboard", user);
-    res.render('dashboard'); // Assuming you have a dashboard view
+    const serverStatus = process.env.SERVER_STATUS;
+    const serverStatusEqRemote = (serverStatus === 'local');
+    res.render('dashboard', { server_status_eq_remote: serverStatusEqRemote }); // Assuming you have a dashboard view
   });
 
 router.get('/addMovieRoute', isAdminAuthenticated, (req, res) => {
