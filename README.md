@@ -19,7 +19,7 @@ Follow these steps to set up and run the app on your local machine:
    ```plaintext
    TMDB_AUTH_KEY = "YOUR TMDB AUTH KEY"
    SERVER_IP = "YOUR SERVER IP"
-   HTTP_SERVER_MEDIA_DIR = "YOUR MEDIA SERVER e.g. C:/Users/imran/Downloads/Video"
+   HTTP_SERVER_MEDIA_DIR = "YOUR MEDIA SERVER DIRECTORY e.g. C:/Users/imran/Downloads/Video"
    HTTP_SERVER_ADDR = "YOUR HTTP SERVER ADDRESS e.g. http://192.168.0.148:8080"
    MOVIE_DIR = "YOUR MOVIE DIRECTORY e.g. C:/Users/imran/Downloads/Video/movies (dir name should be movies)"
    SHOWS_DIR = "YOUR SHOWS DIRECTORY e.g. C:/Users/imran/Downloads/Video/shows (dir name should be shows)"
