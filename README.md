@@ -18,6 +18,7 @@ Follow these steps to set up and run the app on your local machine:
 2. Add the following environment variables to the `.env` file:
    ```plaintext
    TMDB_AUTH_KEY = "YOUR TMDB AUTH KEY"
+   MONGO_DB_URL="YOUR MONGODB URL"
    SERVER_IP = "YOUR SERVER IP"
    HTTP_SERVER_MEDIA_DIR = "YOUR MEDIA SERVER DIRECTORY e.g. C:/Users/imran/Downloads/Video"
    HTTP_SERVER_ADDR = "YOUR HTTP SERVER ADDRESS e.g. http://192.168.0.148:8080"

@@ -8,7 +8,7 @@ const port = 3000
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://projectninjatech:My6q4j8OAzd9cjAa@nodejs.51luhga.mongodb.net/netflix', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 // User db
@@ -23,7 +23,7 @@ app.use(session({
     secret: 'abcd1234',
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongoUrl:"mongodb+srv://projectninjatech:My6q4j8OAzd9cjAa@nodejs.51luhga.mongodb.net/netflix"}),
+    store: new MongoStore({ mongoUrl: process.env.MONGO_DB_URL}),
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week (adjust as needed)
     },
