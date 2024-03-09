@@ -42,11 +42,11 @@ node app.js or npm run dev (if running locally which will create http-server)
    sudo apt-get install -y nodejs
 
 5. Check the NodeJs and npm version:
-```plaintext
+   ```plaintext
    node --version && npm --version
 
 6. Install PM2 so that the app will run in the background:
-```plaintext
+   ```plaintext
    sudo npm i pm2 -g
    pm2 start npm --name "httpserver" -- run start:server
    pm2 start npm --name "app" -- run app
