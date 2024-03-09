@@ -26,8 +26,27 @@ Follow these steps to set up and run the app on your local machine:
    PORT = 5000
    SERVER_STATUS = "remote (if local then scanAllMovies and scanAllShows button will be shown on dashboard)"
 
-### Start the App
+### Start the App on Windows
 1. Install dependencies by running:
 npm install
 2. Start the Node.js server by running:
 node app.js or npm run dev (if running locally which will create http-server)
+
+### Deploy the App on Ubuntu Server
+1. Clone the repo
+2. npm install
+3. Create the .env file (follow the instruction to create .env as mentioned above)
+4. Install NodeJS:
+   ```plaintext
+   curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+   sudo apt-get install -y nodejs
+
+5. Check the NodeJs and npm version:
+```plaintext
+   node --version && npm --version
+
+6. Install PM2 so that the app will run in the background:
+```plaintext
+   sudo npm i pm2 -g
+   pm2 start npm --name "httpserver" -- run start:server
+   pm2 start npm --name "app" -- run app
