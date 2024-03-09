@@ -34,7 +34,10 @@ node app.js or npm run dev (if running locally which will create http-server)
 
 ### Deploy the App on Ubuntu Server
 1. Clone the repo
-2. npm install
+2. Install all the packages and dependencies:
+   ```plaintext
+   npm install
+
 3. Create the .env file (follow the instruction to create .env as mentioned above)
 4. Install NodeJS:
    ```plaintext
