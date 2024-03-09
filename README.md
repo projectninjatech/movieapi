@@ -24,7 +24,7 @@ Follow these steps to set up and run the app on your local machine:
    MOVIE_DIR = "YOUR MOVIE DIRECTORY e.g. C:/Users/imran/Downloads/Video/movies (dir name should be movies)"
    SHOWS_DIR = "YOUR SHOWS DIRECTORY e.g. C:/Users/imran/Downloads/Video/shows (dir name should be shows)"
    PORT = 5000
-   SERVER_STATUS = "remote (if local then scanAllMovies and scanAllShows button will be shown on dashboard)"
+   SERVER_STATUS = "remote or local (if local then scanAllMovies and scanAllShows button will be shown on dashboard)"
 
 ### Start the App on Windows
 1. Install dependencies by running:
