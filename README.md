@@ -53,3 +53,13 @@ node app.js or npm run dev (if running locally which will create http-server)
    sudo npm i pm2 -g
    pm2 start npm --name "httpserver" -- run start:server
    pm2 start npm --name "app" -- run app
+
+7. To reboot or poweroff from the admin dashboard:
+Open Ubuntu Server terminal and type -
+   ```plaintext
+   sudo visudo
+
+Add the following lines at the end of the file, replacing <username> with your actual username:
+   ```plaintext
+   <username> ALL=(ALL) NOPASSWD: /sbin/poweroff
+   <username> ALL=(ALL) NOPASSWD: /sbin/reboot
