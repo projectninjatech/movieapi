@@ -2,6 +2,36 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const User = require('../models/User')
+const { exec } = require('child_process');
+
+
+// Endpoint to power off the server
+router.get('/poweroff', (req, res) => {
+    exec('sudo poweroff', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            res.status(500).send('Error powering off server');
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+        res.send('Server is powering off...');
+    });
+});
+
+// Endpoint to restart the server
+router.get('/restart', (req, res) => {
+    exec('sudo reboot', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            res.status(500).send('Error restarting server');
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+        res.send('Server is restarting...');
+    });
+});
 
 router.post('/register', async (req, res) => {
     try {
